@@ -9,7 +9,7 @@ import { useLogin } from "../hooks/useLogin";
 import { Link } from "react-router-dom";
 
 function Login() {
-  const { login } = useLogin();
+  const { login, loading } = useLogin();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,7 +22,6 @@ function Login() {
     setEmail("");
   };
 
-  let loading = false;
   return (
     <div className={styles.formWrapper}>
       <form onSubmit={handleSubmit} className={styles.form}>

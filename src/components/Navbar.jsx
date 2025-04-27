@@ -11,7 +11,7 @@ import { useSignout } from "../hooks/useSignout";
 import { useGlobalContext } from "../hooks/useGlobalContext";
 
 function Navbar() {
-  const { signOutUser } = useSignout();
+  const { signOutUser, loading } = useSignout();
   const { user } = useGlobalContext();
 
   return (
@@ -25,7 +25,12 @@ function Navbar() {
           <div className={styles.avatar}>
             <span>Hello, {user.email}</span>
             <img src="https://picsum.photos/400" alt="" />
-            <button onClick={signOutUser}>Logout</button>
+            {!loading && <button onClick={signOutUser}>Logout</button>}
+            {loading && (
+              <button className={styles.disabled} disabled>
+                Loadgin...
+              </button>
+            )}
           </div>
         )}
 
