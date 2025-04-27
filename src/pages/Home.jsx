@@ -1,6 +1,7 @@
 // styles
 import styles from "./Home.module.css";
 
+// icons fixed
 import { FaHandPointRight } from "react-icons/fa";
 
 // custom hooks
