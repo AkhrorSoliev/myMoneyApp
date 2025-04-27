@@ -22,7 +22,7 @@ function Home() {
         {transactions && <TransactionsList transactions={transactions} />}
       </div>
       <div>
-        <h2>Add New Transacion:</h2>
+        <h2>Add New Transactions:</h2>
         <TransactionForm />
       </div>
     </div>
