@@ -1,6 +1,8 @@
 // styles
 import styles from "./Home.module.css";
 
+import { FaHandPointRight } from "react-icons/fa";
+
 // custom hooks
 import { useCollection } from "../hooks/useCollection";
 
@@ -20,6 +22,14 @@ function Home() {
     <div className={`${styles.home} container`}>
       <div style={{ flexShrink: 0 }}>
         {transactions && <TransactionsList transactions={transactions} />}
+        {transactions && transactions.length === 0 && (
+          <div className={styles.empty}>
+            <h2>No transactions yet.</h2>
+            <p>
+              Add your first transaction. <FaHandPointRight />
+            </p>
+          </div>
+        )}
       </div>
       <div>
         <h2>Add New Transactions:</h2>
