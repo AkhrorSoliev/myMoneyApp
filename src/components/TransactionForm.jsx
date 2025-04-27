@@ -62,7 +62,6 @@ function TransactionForm() {
             value={price}
           />
         </label>
-
         <button>Add</button>
       </form>
     </div>
