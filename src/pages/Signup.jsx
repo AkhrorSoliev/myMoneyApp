@@ -13,7 +13,7 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { signup } = useSignup();
+  const { signup, loading } = useSignup();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +23,6 @@ function Signup() {
     setEmail("");
   };
 
-  const loading = false;
   return (
     <div className={styles.formWrapper}>
       <form onSubmit={handleSubmit} className={styles.form}>
