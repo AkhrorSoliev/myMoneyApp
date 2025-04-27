@@ -6,3 +6,13 @@
 .home h2 {
   margin-bottom: 20px;
 }
+
+.empty p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  svg {
+    font-size: 20px;
+  }
+}
